@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Jimmy's Diner</h1>
+      <p>The best burgers and pizzas in town.</p>
+    </header>
+    <div class="container" id="menu"></div>
+    <div class="container" id="order">
+      <h2 class="text-center">Your order</h2>
+      <div id="custom-order">
+        <span class="placeholder-text gray"
+          >There are no items in your cart.</span
+        >
+      </div>
+      <div class="total">
+        <h2>Total Price</h2>
+        <p class="price" id="total-price">0$</p>
+      </div>
+
+      <button class="full-size-button text-center" id="complete-order">
+        Complete order
+      </button>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

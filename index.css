@@ -1,0 +1,144 @@
+:root {
+  --gray: #8b8b8b;
+  --mediumgray: #dedede;
+  --lightgray: #d2d2d2;
+  --darkgray: #3c3c3c;
+  --accent: #16db99;
+}
+
+@font-face {
+  font-family: "Smythe";
+  src: url(Smythe-Regular.ttf);
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  color: black;
+  font-family: "Smythe";
+}
+header {
+  font-family: "Smythe";
+  background-image: url(/images/burger-bg.png);
+  padding: 48px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  margin: 0;
+}
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 39px;
+}
+h2 {
+  margin: 0;
+  font-size: 28px;
+}
+header p {
+  font-size: 23px;
+}
+.price {
+  font-size: 20px;
+}
+.container {
+  padding: 48px;
+}
+.card {
+  border-bottom: 1px solid var(--lightgray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0px;
+}
+.add-item {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid var(--mediumgray);
+  color: var(--darkgray);
+  font-size: 32px;
+  cursor: pointer;
+}
+.add-item:hover {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+}
+.item-emoji {
+  width: 120px;
+  text-align: center;
+}
+.menu-item {
+  display: flex;
+  gap: 12px;
+}
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item-emoji {
+  font-size: 78px;
+}
+#order {
+  padding-top: 0;
+}
+#custom-order {
+  border-bottom: 2px solid black;
+}
+.order-item,
+.total {
+  margin: 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-item-name {
+  font-size: 28px;
+}
+.remove-order-item {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.remove-order-item:hover {
+  text-decoration: underline;
+}
+.full-size-button {
+  background-color: var(--accent);
+  width: 100%;
+  border: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 16px;
+  margin: 32px 0px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.full-size-button:hover {
+  background-color: #13bf86;
+}
+.placeholder-text {
+  display: block;
+  margin: 8px 0px;
+}
+
+/* Utility */
+.gray {
+  color: var(--gray);
+}
+.text-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
