@@ -20,4 +20,11 @@ export const menuArray = [
     emoji: "🍺",
     id: 2,
   },
+  {
+    name: "Fritz Limo",
+    ingredients: ["fritz, limo"],
+    price: 8,
+    emoji: "🍼",
+    id: 3,
+  },
 ];
