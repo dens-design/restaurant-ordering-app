@@ -3,14 +3,34 @@ import { menuArray } from "./data.js";
 const menuContainer = document.getElementById("menu");
 const orderContainer = document.getElementById("custom-order");
 const orderWrapper = document.getElementById("order");
+const modal = document.getElementById("payment-modal");
 let order = [];
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  completeOrder();
+});
 
 document.addEventListener("click", function (e) {
+  if (
+    !Array.from(document.querySelectorAll("#payment-modal *")).includes(
+      e.target
+    ) &&
+    e.target.id != "payment-modal"
+  ) {
+    //Necessary to also close modal when outside modal click target is complete button
+    if (!modal.classList.contains("hidden")) {
+      modal.classList.add("hidden");
+      return;
+    }
+  }
   if (e.target.dataset.add) {
     addItem(e.target.dataset.add);
-  }
-  if (e.target.dataset.remove) {
+  } else if (e.target.dataset.remove) {
     removeItem(e.target.dataset.remove);
+  } else if (e.target.id === "complete-order") {
+    order.length === 0
+      ? document.getElementById("complete-error").classList.remove("hidden")
+      : modal.classList.remove("hidden");
   }
 });
 
@@ -36,6 +56,7 @@ function renderMenu() {
   menuContainer.innerHTML = htmlString;
 }
 function addItem(id) {
+  document.getElementById("complete-error").classList.add("hidden");
   order.push(id);
   renderOrder();
   updatePrice();
@@ -77,6 +98,11 @@ function updatePrice() {
     : "";
 
   totalPrice.textContent = sum + "$";
+}
+function completeOrder() {
+  orderWrapper.innerHTML = `<p class="success-message">Thanks, ${
+    document.getElementById("name").value
+  }! Your order is on its way!</p>`;
 }
 
 renderMenu();

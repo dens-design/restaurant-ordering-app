@@ -30,6 +30,28 @@
       <button class="full-size-button text-center" id="complete-order">
         Complete order
       </button>
+      <p id="complete-error" class="error hidden">
+        Please add an item to your cart to proceed.
+      </p>
+
+      <div class="hidden" id="payment-modal">
+        <h2>Enter card details</h2>
+
+        <form id="form">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            minlength="8"
+            required
+          />
+          <input type="number" placeholder="Enter card number" required />
+          <input type="number" max="999" placeholder="Enter CVV" required />
+          <button class="full-size-button text-center" id="submit-payment">
+            Pay
+          </button>
+        </form>
+      </div>
     </div>
     <script src="index.js" type="module"></script>
   </body>
